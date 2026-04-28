@@ -1,1 +1,38 @@
-# VolodymyrStanishevskyy.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPV Drones - Main</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="main.html" class="active">Main</a>
+            <a href="compare.html">compare</a>
+            <a href="buy.html">buy</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="text-red">FPV Drones</h1>
+        
+        <section class="types-section">
+            <h2>Types of FPV drones</h2>
+            <ul>
+                <li><strong>Freestyle</strong> multirotor drones, with four, six or eight rotors, uses for freeflight.</li>
+                <li><strong>Race</strong> Usually quadrocopters, uses for sport competitions</li>
+            </ul>
+        </section>
+
+        <hr class="divider">
+
+        <section class="examples-section">
+            <h2 class="text-dark-red">Examples of flight</h2>
+            <p>Liftoff</p>
+            <img src="https://images.unsplash.com/photo-1579829366248-204fe8413f31?auto=format&fit=crop&q=80&w=800" alt="FPV Drone in flight" class="drone-image">
+        </section>
+    </main>
+</body>
+</html>
