@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPV Drones - Buy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="main.html">Main</a>
+            <a href="compare.html">compare</a>
+            <a href="buy.html" class="active">buy</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Buy drone</h2>
+        
+        <form action="#" method="POST" class="buy-form">
+            <p class="form-row">
+                <label for="fname">First name</label>
+                <input type="text" id="fname" name="fname">
+            </p>
+            
+            <p class="form-row">
+                <label for="lname">Last name</label>
+                <input type="text" id="lname" name="lname">
+            </p>
+            
+            <p class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com">
+            </p>
+            
+            <p class="form-row">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX">
+            </p>
+            
+            <fieldset class="form-row">
+                <legend>Radio control equipment:</legend>
+                <p class="input-group">
+                    <label><input type="radio" name="radio_eq" value="tx12"> Radiomaster TX12</label>
+                    <label><input type="radio" name="radio_eq" value="tx16s"> Radiomaster TX16s</label>
+                </p>
+            </fieldset>
+            
+            <fieldset class="form-row">
+                <legend>Add accessories:</legend>
+                <p class="input-group">
+                    <label><input type="checkbox" name="acc_battery"> Spare LiPo Battery</label>
+                    <label><input type="checkbox" name="acc_props"> Extra Propellers</label>
+                </p>
+            </fieldset>
+            
+            <p class="form-row">
+                <label for="protocol">Radio control protocol</label>
+                <select id="protocol" name="protocol">
+                    <option value="elrs">ELRS</option>
+                    <option value="crossfire">Crossfire</option>
+                    <option value="frsky">FrSky</option>
+                </select>
+            </p>
+            
+            <p class="form-row">
+                <label for="config">Betaflight Config File:</label>
+                <input type="file" id="config" name="config" class="file-input">
+            </p>
+            
+            <menu class="form-actions">
+                <li><button type="submit" class="btn">Send order</button></li>
+                <li><button type="reset" class="btn btn-outline">Clear form</button></li>
+            </menu>
+        </form>
+        
+    </main>
+</body>
+</html>
