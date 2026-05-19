@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPV - Compare</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">FPV</a>
+        <button class="menu-header" id="mobile-menu-btn" aria-label="Open navigation menu">☰ MENU</button>
+    </header>
+
+    <nav class="primary-nav" id="main-nav" aria-label="Primary navigation">
+        <a href="history.html">FPV drones history</a>
+        <a href="flights.html">flights</a>
+        <a href="compare.html" class="active" aria-current="page">compare</a>
+        <a href="buy.html">buy drones</a>
+    </nav>
+
+    <main class="compare-main">
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th class="th-feature">Feature</th>
+                    <th class="th-drone">Nazgul5 V3</th>
+                    <th class="th-drone">Mark5 HD</th>
+                    <th class="th-drone">Roma F5 V2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Category</td>
+                    <td data-label="Nazgul5 V3">Freestyle</td>
+                    <td data-label="Mark5 HD">Premium Freestyle</td>
+                    <td data-label="Roma F5 V2">Racing/Freestyle</td>
+                </tr>
+                <tr>
+                    <td>Battery</td>
+                    <td data-label="Nazgul5 V3">6S LiPo</td>
+                    <td data-label="Mark5 HD">6S LiPo</td>
+                    <td data-label="Roma F5 V2">4S/6S options</td>
+                </tr>
+                <tr>
+                    <td>Video</td>
+                    <td data-label="Nazgul5 V3">DJI O3 / Analog</td>
+                    <td data-label="Mark5 HD">DJI O3 Unit</td>
+                    <td data-label="Roma F5 V2">Analog / HD</td>
+                </tr>
+                <tr>
+                    <td>Durability</td>
+                    <td data-label="Nazgul5 V3">High (5mm arms)</td>
+                    <td data-label="Mark5 HD">Elite (Titanium)</td>
+                    <td data-label="Roma F5 V2">Medium (Plastics)</td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td data-label="Nazgul5 V3">$450</td>
+                    <td data-label="Mark5 HD">$485</td>
+                    <td data-label="Roma F5 V2">$290</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>© 2026 Станішевський В.Є. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mainNav = document.getElementById('main-nav');
+        menuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

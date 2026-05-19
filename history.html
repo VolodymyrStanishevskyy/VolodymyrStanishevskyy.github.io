@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Історія FPV дронів</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">FPV</a>
+        <button class="menu-header" id="mobile-menu-btn" aria-label="Open navigation menu">☰ MENU</button>
+    </header>
+
+    <nav class="primary-nav" id="main-nav" aria-label="Primary navigation">
+        <a href="history.html" class="active" aria-current="page">FPV drones history</a>
+        <a href="flights.html">flights</a>
+        <a href="compare.html">compare</a>
+        <a href="buy.html">buy drones</a>
+    </nav>
+
+    <main class="history-container">
+        <header class="history-header">🕮</header>
+        
+        <article>
+            <header class="article-header">
+                <h2>The Early Beginnings</h2>
+                <time class="year-box">
+                    <img src="https://img.icons8.com/ios/50/ffffff/calendar--v1.png" class="calendar-icon" alt="calendar">
+                    2000s
+                </time>
+            </header>
+            <p>The concept of FPV flying emerged from the RC airplane community. Enthusiasts began mounting small, low-resolution security cameras on fixed-wing models.</p>
+        </article>
+
+        <article>
+            <header class="article-header">
+                <h2>The Rise of Multirotors</h2>
+                <time class="year-box">
+                    <img src="https://img.icons8.com/ios/50/ffffff/calendar--v1.png" class="calendar-icon" alt="calendar">
+                    2010 - 2014
+                </time>
+            </header>
+            <p>The "Blackout Mini H" frame revolutionized the industry by proving that small, 5-inch quads were agile enough for high-speed maneuvers.</p>
+        </article>
+
+        <article>
+            <header class="article-header">
+                <h2>The Racing Revolution</h2>
+                <time class="year-box">
+                    <img src="https://img.icons8.com/ios/50/ffffff/calendar--v1.png" class="calendar-icon" alt="calendar">
+                    2015 - 2017
+                </time>
+            </header>
+            <p>FPV flying went mainstream with the birth of professional racing leagues like the Drone Racing League (DRL).</p>
+        </article>
+
+        <article>
+            <header class="article-header">
+                <h2>The Digital Shift</h2>
+                <time class="year-box">
+                    <img src="https://img.icons8.com/ios/50/ffffff/calendar--v1.png" class="calendar-icon" alt="calendar">
+                    2019 - 2021
+                </time>
+            </header>
+            <p>For years, pilots were limited to low-quality analog video. This changed when DJI released its Digital FPV System, offering a high-definition 720p feed with incredibly low latency.</p>
+        </article>
+
+        <article>
+            <header class="article-header">
+                <h2>Nowadays</h2>
+                <time class="year-box">
+                    <img src="https://img.icons8.com/ios/50/ffffff/calendar--v1.png" class="calendar-icon" alt="calendar">
+                    Nowadays
+                </time>
+            </header>
+            <p>Today, FPV technology has evolved into a sophisticated tool used in Hollywood blockbusters, extreme sports broadcasting, and industrial inspections. Modern systems like ELRS provide miles of signal range, while O3-level air units record 4K stabilized video directly on the drone.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2026 Станішевський В.Є. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mainNav = document.getElementById('main-nav');
+        menuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

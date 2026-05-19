@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FPV - Світ дронів</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">FPV</a>
+        <button class="menu-header" id="mobile-menu-btn" aria-label="Open navigation menu">☰ MENU</button>
+    </header>
+
+    <nav class="primary-nav" id="main-nav" aria-label="Primary navigation">
+        <a href="history.html">FPV drones history</a>
+        <a href="flights.html">flights</a>
+        <a href="compare.html">compare</a>
+        <a href="buy.html">buy drones</a>
+    </nav>
+
+    <main class="index-main">
+        <article class="c1 left-img">
+            <img src="C:\web design\image1.png" alt="Drone Simulator">
+            <section>
+                <h2>Master the Basics in Simulators</h2>
+                <p>Before risking your hardware, spend hours in digital environments.</p>
+            </section>
+            <a href="flights.html" class="btn-explore">EXPLORE</a>
+        </article>
+
+        <article class="c2 right-img">
+            <img src="C:\web design\image2.png" alt="Training Drone">
+            <section>
+                <h2>Beginner-Friendly Training Drones</h2>
+                <p>Start with "Tiny Whoops" or ducted quads.</p>
+            </section>
+            <a href="buy.html" class="btn-explore">EXPLORE</a>
+        </article>
+
+        <article class="c3 left-img">
+            <img src="C:\web design\image3.png" alt="Radio Controller">
+            <section>
+                <h2>High-End Radio Controllers</h2>
+                <p>Your link to the drone. Premium controllers with hall-effect gimbals and ELRS support</p>
+            </section>
+            <a href="buy.html" class="btn-explore">EXPLORE</a>
+        </article>
+
+        <article class="c4 right-img">
+            <img src="C:\web design\image4.png" alt="FPV Goggles">
+            <section>
+                <h2>Top-Tier FPV Goggles</h2>
+                <p>Experience the world through the drone's eyes in high definition</p>
+            </section>
+            <a href="buy.html" class="btn-explore">EXPLORE</a>
+        </article>
+
+        <article class="c5 left-img">
+            <img src="C:\web design\image5.png" alt="Batteries">
+            <section>
+                <h2>High-Performance Batteries</h2>
+                <p>Power is everything.</p>
+            </section>
+            <a href="buy.html" class="btn-explore">EXPLORE</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2026 Станішевський В.Є. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mainNav = document.getElementById('main-nav');
+        menuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
