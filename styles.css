@@ -1,0 +1,422 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+/* =========================================
+   GLOBAL STYLES & RESET
+========================================= */
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #21262d;
+    font-family: "Microsoft Sans Serif", "Arial", sans-serif;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: scroll; /* ДОДАНО: Завжди показувати смугу прокрутки для ідеального центрування */
+}
+
+header, nav, main {
+    width: 100%;
+    max-width: 1000px;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:focus-visible, a:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; white-space: nowrap;
+}
+
+/* =========================================
+   HEADER & NAVIGATION
+========================================= */
+.logo {
+    background-color: #272e37;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 10px 40px;
+    color: #e23e3e;
+    font-size: 28px;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
+
+.primary-nav {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.primary-nav a {
+    flex: 1;
+    background-color: #272e37;
+    border: 1px solid #000;
+    padding: 18px 0;
+    text-align: center;
+    color: #9c9999;
+    font-size: 20px;
+    margin-right: -1px;
+    transition: all 0.2s;
+}
+
+.primary-nav a:first-child { border-radius: 10px 0 0 10px; }
+.primary-nav a:last-child { border-radius: 0 10px 10px 0; margin-right: 0; }
+.primary-nav a:hover, .primary-nav a.active { color: #ffffff; background-color: #2d353f; }
+
+.menu-header { display: none; background: none; border: none; }
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    width: 100%;
+    background-color: #3a3a3a;
+    padding: 30px;
+    text-align: center;
+    color: #918888;
+    margin-top: 50px;
+}
+
+/* =========================================
+   INDEX PAGE STYLES
+========================================= */
+.index-main article {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: 1px solid #d2d2d2;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+.index-main article img { width: 200px; height: 200px; object-fit: cover; }
+.index-main article section { flex: 1; padding: 0 40px; }
+.index-main article h2 { font-size: 22px; margin-bottom: 15px; font-weight: bold; }
+.index-main article p { font-size: 18px; line-height: 1.4; }
+
+.btn-explore {
+    position: absolute;
+    bottom: 15px;
+    padding: 8px 25px;
+    background-color: #1b4902;
+    color: white;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.left-img img { border-radius: 20px 0 0 20px; }
+.left-img .btn-explore { right: 20px; }
+.left-img section { text-align: left; }
+
+.right-img { flex-direction: row-reverse; }
+.right-img img { border-radius: 0 20px 20px 0; }
+.right-img .btn-explore { left: 20px; }
+.right-img section { text-align: right; }
+
+.c1 { background-color: rgba(130, 80, 80, 0.4); } .c1 h2 { color: #ffbaba; } .c1 p { color: #e2e594; }
+.c2 { background-color: rgba(100, 110, 120, 0.4); } .c2 h2 { color: #65bedb; } .c2 p { color: #e3e5ea; }
+.c3 { background-color: rgba(80, 110, 120, 0.4); } .c3 h2 { color: #65bedb; } .c3 p { color: #e3e5ea; }
+.c4 { background-color: rgba(100, 90, 150, 0.4); } .c4 h2 { color: #bceaff; } .c4 p { color: #abc1f7; }
+.c5 { background-color: rgba(100, 110, 70, 0.4); } .c5 h2 { color: #cc7518; } .c5 p { color: #afd33d; }
+
+/* =========================================
+   HISTORY PAGE STYLES
+========================================= */
+.history-container {
+    background-color: rgba(217, 217, 217, 0.1);
+    border-radius: 25px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.history-header {
+    background-color: #483A3A;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 80px;
+    border-radius: 25px 25px 0 0;
+}
+
+.history-container article {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #d2d2d2;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    padding: 25px 40px;
+    width: 80%;
+}
+
+.article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d2d2d2;
+    margin-bottom: 20px;
+}
+
+.history-container h2 { font-size: 20px; font-weight: 400; color: #ffffff; flex-grow: 1; text-align: center; margin: 0; }
+.year-box { display: flex; align-items: center; gap: 10px; font-size: 16px; color: #ffffff; min-width: 110px; justify-content: flex-end; }
+.calendar-icon { width: 22px; height: 22px; opacity: 0.8; }
+.history-container p { font-size: 16px; line-height: 1.5; text-align: center; color: #ffffff; margin: 0; }
+
+/* =========================================
+   COMPARE PAGE STYLES
+========================================= */
+.compare-main { margin-bottom: 72px; }
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #21262d;
+}
+.compare-table th, .compare-table td {
+    border: 1px solid #3e444d;
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.compare-table th { font-weight: normal; background-color: #171b21; }
+.compare-table th.th-feature { color: #e23e3e; }
+.compare-table th.th-drone { color: #f39191; }
+.compare-table td:first-child { color: #9c9999; }
+.compare-table tbody td { color: #ffffff; }
+
+/* =========================================
+   FLIGHTS PAGE STYLES
+========================================= */
+.flights-page { margin-bottom: 72px; }
+.flight-panel {
+    min-height: 564px;
+    padding: 0 0 46px; 
+    border-radius: 24px;
+    background: rgba(39, 46, 55, 0.55);
+    overflow: hidden; 
+}
+.flight-icon {
+    height: 112px;
+    width: 100%; 
+    margin: 0 0 52px 0;
+    display: grid;
+    place-items: center;
+    background: #151a20;
+    border-radius: 24px 24px 0 0; 
+}
+.flight-icon p {
+    margin: 0;
+    color: #c4c4c4;
+    font-size: 92px;
+    transform: rotate(45deg);
+}
+.cards-container { padding: 0 24px; width: 100%; }
+.video-card { display: grid; overflow: hidden; border-radius: 20px; margin-bottom: 30px; }
+.video-card h2 { height: 72px; margin: 0; display: grid; place-items: center; border-radius: 20px; color: #ffe100; font-weight: 400; }
+.video-card figure { height: 280px; margin: 18px 22px; background: #fff; }
+.video-liftoff { background: #384050; }
+.video-liftoff h2 { background: #191a22; font-size: 32px; }
+.video-uncrashed { background: #314432; }
+.video-uncrashed h2 { background: #19281d; font-size: 22px; }
+
+@media (min-width: 481px) {
+    .cards-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 10px; }
+    .flight-icon { margin-bottom: 26px; }
+}
+
+/* =========================================
+   BUY PAGE STYLES
+========================================= */
+.buy-main {
+    position: relative;
+    width: 100%;
+    height: 689px;
+    background-color: #ffffff26;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.money-banner {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 1002px;
+    height: 97px;
+    background-color: #5aff0040;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.money-icon { font-size: 64px; margin: 0; }
+
+.buy-card {
+    position: absolute;
+    width: 461px;
+    height: 160px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+.pos-1 { top: 123px; left: 29px; }
+.pos-2 { top: 123px; left: 510px; }
+.pos-3 { top: 303px; left: 29px; }
+.pos-4 { top: 303px; left: 510px; }
+
+.buy-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 126px;
+    height: 126px;
+    object-fit: cover;
+}
+
+.buy-card-title {
+    position: absolute;
+    top: 12px;
+    left: 134px;
+    width: 310px;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.buy-btn {
+    position: absolute;
+    top: 130px;
+    left: 134px;
+    width: 104px;
+    height: 20px;
+    background-color: #1b4902;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-btn:hover { filter: brightness(1.05); }
+.buy-btn:active { filter: brightness(0.95); }
+.buy-btn span { color: #fff; font-size: 10px; font-weight: bold; }
+
+
+/* =========================================
+   MOBILE ADAPTATION (MAX-WIDTH: 480PX)
+========================================= */
+@media (max-width: 480px) {
+    /* Global Nav & Footer Adaptation (from flights) */
+    header, nav, main { max-width: 440px; }
+    .logo { font-size: 32px; padding: 10px 50px; }
+    .menu-header {
+        display: flex;
+        width: 90%;
+        height: 50px;
+        background-color: #272e37;
+        border: 1px solid #3e444d;
+        border-radius: 8px;
+        color: #9c9999;
+        font-size: 24px;
+        align-items: center;
+        justify-content: center;
+        margin: 10px auto;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .primary-nav {
+        display: none;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto 30px auto;
+    }
+    .primary-nav.active { display: flex; }
+    .primary-nav a {
+        background-color: #272e37;
+        border-radius: 0 !important;
+        margin-right: 0;
+        border: 1px solid #3e444d;
+        border-top: none;
+        padding: 15px 0;
+        font-size: 22px;
+    }
+    footer { font-size: 12px; padding: 20px; }
+
+    /* Index Page */
+    .index-main article {
+        margin: 20px auto;
+        height: 163px;
+        width: 90%;
+        border-radius: 25px;
+    }
+    .index-main article img { width: 163px; height: 163px; }
+    .index-main article section { position: absolute; width: 180px; top: 35px; padding: 0; }
+    .index-main article h2 { font-size: 11px; margin-bottom: 8px; }
+    .index-main article p { font-size: 11px; line-height: 1.3; }
+    .btn-explore { width: 104px; height: 20px; font-size: 10px; padding: 0; display: flex; align-items: center; justify-content: center; bottom: 15px; }
+    .left-img section { right: 15px; text-align: left; }
+    .left-img .btn-explore { right: 15px; }
+    .right-img section { left: 15px; text-align: right; }
+    .right-img .btn-explore { left: 15px; }
+
+    /* History Page */
+    .history-container article { width: 95%; padding: 20px; border-radius: 25px; }
+    .history-container h2 { font-size: 16px; }
+    .history-container p { font-size: 14px; }
+    .history-header { height: 100px; font-size: 50px; }
+
+    /* Compare Page */
+    .compare-table { display: table; }
+    .compare-table thead { display: none; }
+    .compare-table tbody, .compare-table tr, .compare-table td { display: block; width: 100%; }
+    .compare-table tr { margin-bottom: 18px; }
+    .compare-table td { border: none; border-bottom: 1px solid #3e444d; text-align: left; padding: 14px 20px; font-size: 18px; background-color: transparent; }
+    .compare-table td:first-child { display: flex; justify-content: space-between; align-items: center; color: #9c9999; font-size: 20px; padding-top: 18px; }
+    .compare-table td:first-child::before { content: "Feature"; color: #e23e3e; font-size: 20px; }
+    .compare-table td[data-label] { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .compare-table td[data-label]::before { content: attr(data-label); color: #f39191; font-size: 18px; }
+
+    /* Flights Page */
+    .flight-panel { padding: 0 0 20px; }
+    .flight-icon { height: 100px; margin-bottom: 34px; }
+    .cards-container { padding: 0 14px; }
+    .video-card { margin-bottom: 54px; }
+    .video-card figure { height: 282px; margin: 16px 14px; }
+
+    /* Buy Page */
+    .buy-main { position: relative; width: 90%; height: auto; background-color: #2d353f; margin: 20px auto; padding-bottom: 20px; display: flex; flex-direction: column; top: auto; left: auto; overflow: visible;}
+    .money-banner { position: relative; width: 100%; height: 140px; background-color: #4c8c35; border-radius: 25px 25px 0 0; top: auto; left: auto; }
+    .money-icon { font-size: 70px; }
+    .buy-card { position: relative; width: calc(100% - 30px); height: 163px; margin: 15px auto; padding: 15px; top: auto; left: auto; display: block; }
+    .pos-1 { order: 1; } .pos-3 { order: 2; } .pos-2 { order: 3; } .pos-4 { order: 4; }
+    .buy-card-img { top: 18px; left: 15px; object-fit: contain; }
+    .buy-card-title { top: 25px; left: 155px; right: 15px; width: auto; font-size: 15px; text-align: center; }
+    .buy-btn { bottom: 20px; left: calc(155px + (100% - 170px) / 2); transform: translateX(-50%); top: auto; border-radius: 20px; }
+}
